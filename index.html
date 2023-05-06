@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Water Availability Website Interface</title>
+    <style>
+        /* Navigation bar styles */
+        
+            body {
+                background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAH0A+gMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAACAQADBAf/xAAcEAEBAQEAAwEBAAAAAAAAAAAAARESAhMxIQP/xAAYAQEBAQEBAAAAAAAAAAAAAAACAQAFA//EABgRAQEBAQEAAAAAAAAAAAAAAAABERIC/9oADAMBAAIRAxEAPwD6SqK6bjFCEoNVSGFEWFFiSFAplDgwohw4UGLAr0hxRiopMjIWqyMzayVm1UojSoVYFGhToUoFGhToU4FGjSo0nnUFUKINZqyoyorKsODCGrFhJCglChSDCgnChQSiUoUKCUCnCjIqKrIrKzIzMyMzIg1Uq4lGhToU4FGhToUoFShTokFGiVEoI1mZRYoJxCaEiisKfCgwolKFCgwoJlCgwkpQooylBpQosGKJKzMzMzMzIlWizNRa0Sg1qNW0aQVKFKjSg0ai36hBRolRKCLNWVMUhiopKkKCrQxhMUWEEMCKFK56UqFDWUJV1LC10lVzlXUxddNbQ1tTF09QdTWxtLUt/E0bVxNVLW0dIbWoqNUUo34qUhqIqVRo0So1RRFQkWLKMVqpwoEIVhKkVChRWiwKTK2NiK2rqYzMUraLay6etoa2pjaetoa2rjaWpqMzNai42KiJYSVkGxCoUkqVK1S/FGpRq2iUFKzMqMzMynFFUqnCcygrHSUo57+lBsKOkLHOU4JRcTCh4mlI5XxTl351uE6Llw5bl6OG4bpOHn5bl6OG4bpuXDlcdeExtbHPEOjVSiK0dIaloVbRpDa1GtUpSDUqNUIWZqjI0VmZVVGZSlKUIUosUKUIsQo6SlK5rKNha7Suk8nCUp5Dycr0SnMeaeeF7A5OV6pi/jzT+q+2DyXTvcG45X+o3+izy3TpaHlQvmN8inkLVtC1L5DaWBq2ha1TTHUqMijUtS1RpQWRUVGqLUZmVGjMsVIsZlhQYo1SWDFYiUYURV1tRkVem7SjWxtP2N7HNlxtde27clbG0+m0VTGVGZmRKzVUSot+CsStfg1UqilZqlVGZmZn/9k=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  background-position: center;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#water-level-info {
+  background-image: url("https://th.bing.com/th/id/OIP.LAst7TynzZWDg6xfVdWUbQHaHa?w=171&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7");
+  /* add other background properties as needed */
+padding: 10px;
+margin: auto;
+background-repeat: no-repeat;
+background-size: 4cm;
+  /* adjust padding, margin, and other layout properties as needed */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  /* adjust padding, margin, and other layout properties as needed */
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  /* adjust font size, color, and other text properties as needed */
+}
+
+.logo img {
+  height: 100px;
+  /* adjust image height and other properties as needed */
+}
+
+
+.hero-image {
+  background-image: url('https://th.bing.com/th/id/OIP.LAst7TynzZWDg6xfVdWUbQHaHa?w=171&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7');
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+nav {
+    background-color: #3A3A3A;;
+    display: flex;
+    justify-content: center;
+    padding: 10px ;
+  
+  padding: 10px;
+}
+nav ul {
+    margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+nav li {
+    margin: 0 20px;
+}
+.image-container {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
+img {
+  width: max-content; /* Set image width */
+  margin-right: 20px; /* Add some space between the image and text */
+}
+nav a {
+    color: #fff;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  
+}
+nav a:hover {
+   
+    background-color: #FFF;
+  color: #3A3A3A;
+  transition: all 0.3s ease;
+}
+
+/* Section styles */
+section {
+    margin: 50px 0;
+    padding: 0 20px;
+}
+section h1{
+  color: #030a0f;
+  font-size: 4rem;
+  margin-bottom: 40px;
+  text-align:center ;
+  text-decoration: underline;
+ text-shadow:2px 2px #31c8ee;
+ 
+  text-align:center ;
+}
+section h2 {
+    color: #0071c5;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+section p {
+    line-height: 1.5;
+    font-size: large;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+    </style>
+</head>
+<body>
+	<nav>
+		<ul>
+            <li><a href="#water-level-info">Water level information</a></li>
+    <li><a href="#water-quality-info">Water quality information</a></li>
+    <li><a href="#drought-status">Drought status</a></li>
+    <li><a href="#conservation-tips">Conservation tips</a></li>
+    <li><a href="#real-time-data">Real-time data</a></li>
+    <li><a href="#water-saving-calculators">Water-saving calculators</a></li>
+    <li><a href="#education-resources">Education resources</a></li>
+    <li><a href="#water-conservation-programs">Water conservation programs</a></li>
+    <li><a href="#news-updates">News and updates</a></li>
+		</ul>
+	</nav>
+	
+	<section id="water-level-info">
+    <h1>WATER AVAILABILITY</h1>
+    <div class="logo">
+      <!-- <img src="https://th.bing.com/th/id/OIP.LAst7TynzZWDg6xfVdWUbQHaHa?w=171&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Water Availability Logo"> -->
+    </div>
+		<h2>Water level information</h2>
+        <div class= "image-container" >
+            <img src="https://th.bing.com/th/id/OIP.NmnGcqZMS4tIIHYuKDXs1QHaGw?w=205&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+		<p>In India, water level information is provided by several government agencies such as the Central Water Commission (CWC), the National Remote Sensing Centre (NRSC), and the India Meteorological Department (IMD). The CWC is responsible for monitoring the water levels of major rivers and reservoirs in the country, while the NRSC provides satellite-based information on the water levels of smaller rivers and lakes. The IMD provides information on rainfall and weather patterns that can affect water levels.
+
+            Water level information is important in India due to the country's dependence on agriculture and the availability of water for irrigation. Droughts and floods can have a significant impact on the water levels in rivers and reservoirs, which can in turn affect the availability of water for irrigation and other uses.
+            
+            In recent years, there has been a growing emphasis on water conservation and management in India, with the government implementing several programs and initiatives aimed at improving the country's water resources. Water level information plays an important role in these efforts, as it helps policymakers and water managers make informed decisions about water allocation and usage.</p>
+            </div>
+	</section>
+	
+	<section id="water-quality-info">
+   
+		<h2>Water quality information</h2>
+        <div class= "image-container" >
+            <img src="https://th.bing.com/th/id/OIP.mEJsgwc5JYfDRpRGP9NQ7wEsCa?w=316&h=179&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+		<p>India faces significant challenges when it comes to water quality. Many areas in the country suffer from poor water quality due to a variety of factors such as pollution, inadequate treatment, and poor management of water resources.
+
+            Some of the main sources of water pollution in India include untreated sewage, industrial waste, agricultural runoff, and improper disposal of hazardous waste. In addition, poor sanitation and hygiene practices in many parts of the country contribute to the problem.
+            
+            The government of India has implemented various measures to address water quality issues, including the National Water Quality Monitoring Programme, which monitors water quality in various locations across the country. The programme provides information on various water quality parameters such as pH, dissolved oxygen, biological oxygen demand, and total dissolved solids.
+            
+            In addition to government efforts, there are several non-governmental organizations (NGOs) working to improve water quality in India. For example, the Water Aid Foundation is working to provide clean water and sanitation to rural communities, while the Centre for Science and Environment is working to promote sustainable water management practices.
+            
+            Despite these efforts, there is still a long way to go to improve water quality in India. Access to clean water remains a significant challenge for many people in the country, particularly in rural areas. Further efforts are needed to address the underlying causes of poor water quality and to ensure that everyone in India has access to safe and clean water.</p>
+        </div>
+            </section>
+	
+	<section id="drought-status">
+		<h2>Drought status</h2>
+        <div class= "image-container" >
+
+        <img src="https://www.hkctp.com.hk/images/upload/Image/drough1.JPG"
+		<p>
+            India is a country that is highly vulnerable to drought due to its geography, climate, and dependence on agriculture. Drought conditions occur frequently in India and can have significant impacts on agriculture, the economy, and society as a whole.
+
+The current drought status in India varies by region. According to the Indian Meteorological Department, some regions in India are currently experiencing dry conditions, while others have received normal or above-normal rainfall.
+
+In recent years, several states in India have been severely affected by drought, including Maharashtra, Karnataka, Andhra Pradesh, Telangana, and Tamil Nadu. These droughts have resulted in crop failures, loss of livestock, and reduced water availability for drinking and irrigation.
+
+The Indian government has implemented various measures to mitigate the impact of drought, including providing financial assistance to affected farmers, implementing water conservation measures, and promoting the use of drought-resistant crops.
+
+Despite these efforts, drought continues to be a major challenge for India. The country needs to continue to focus on improving water management practices, increasing the efficiency of irrigation systems, and promoting sustainable agriculture to reduce the impact of droughts in the future.
+            As of now, different areas in India are experiencing different levels of drought conditions. The Indian Meteorological Department regularly monitors the drought situation in the country and provides updates on the current status. Here is some information about the current drought conditions in different areas:
+
+            Maharashtra: The state of Maharashtra has been facing severe drought conditions for several years. According to recent reports, more than 16,000 villages in the state are facing acute water scarcity, and many farmers have suffered crop failures.
+            
+            Karnataka: Karnataka is also facing a severe drought, with many areas experiencing rainfall deficits of up to 70%. The government has declared a drought in 156 taluks (administrative divisions) in the state.
+            
+            Andhra Pradesh and Telangana: Both Andhra Pradesh and Telangana have been facing drought conditions in recent years, with many farmers suffering crop losses and livestock deaths.
+            
+            Tamil Nadu: Tamil Nadu has been facing drought conditions for several years, with many areas experiencing rainfall deficits of up to 70%. The state has declared a drought in several districts, and many farmers have been affected.
+            
+            Rajasthan: Rajasthan is another state that is prone to drought, particularly in its western regions. The state government has implemented various measures to mitigate the impact of drought, including water conservation and rainwater harvesting programs.
+            
+            Gujarat: Gujarat is currently facing a drought-like situation, with many areas experiencing rainfall deficits. The state government has announced relief measures for affected farmers.
+             It is important to note that drought conditions can change rapidly, and it is essential to monitor the situation closely to ensure that adequate measures are taken to mitigate the impact of drought on communities and the environment.</p>
+             </div>
+	</section>
+	
+	<section id="conservation-tips">
+        <h2>Conservation tips</h2>
+        <div class= "image-container" >
+            <img src="https://th.bing.com/th/id/OIP.fTbWxKxS1U3EggEr9daGIgHaEL?w=312&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7 width="300" height="200" class="my-image" id="image-1""
+		
+  
+
+		<p>Conserving water is crucial for ensuring sustainable use of our planet's resources. Here are some tips and suggestions for how people can conserve water in their daily lives:
+
+            Fix leaky faucets: A small leak can waste a significant amount of water over time. Repairing leaky faucets can save hundreds of gallons of water every year.
+            
+            Take shorter showers: Taking shorter showers can help save water. A five-minute shower uses around 10-25 gallons of water, while a ten-minute shower uses around 25-50 gallons of water.
+            
+            Install low-flow showerheads and faucets: Low-flow showerheads and faucets can help reduce water consumption without compromising on water pressure.
+            
+            Use a bucket when washing your car: Instead of using a hose, use a bucket when washing your car. This can save a lot of water and also prevent water from running off into the street.
+            
+            Install a low-flow toilet: A low-flow toilet can save up to 3-5 gallons of water per flush.
+            
+            Use a broom instead of a hose when cleaning outdoors: Instead of using a hose to clean outdoor surfaces, use a broom. This can save a lot of water and also prevent water from running off into the street.
+            
+            Harvest rainwater: Installing a rainwater harvesting system can help capture and store rainwater, which can then be used for watering plants or cleaning purposes.
+            
+            Use a pool cover: Covering your pool when not in use can help reduce evaporation, which can save water and also reduce the need for chemicals to maintain the pool.
+            
+            Don't overwater plants: Overwatering plants can lead to wastage of water and also cause damage to the plants. Water plants only when needed, and avoid watering during the hottest part of the day.
+            
+            By adopting these simple tips and suggestions, we can all play a role in conserving water and ensuring that our planet's resources are used sustainably.</p>
+        </div>
+	</section>
+	
+	<section id="real-time-data">
+		<h2>Real-time data</h2>
+        <div class= "image-container" >
+            <img src="https://th.bing.com/th/id/OIP.jGer0wojqq37bLR5YODNJAHaE8?w=264&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+		<p>Access to real-time data related to water availability can be helpful in making informed decisions about water usage and conservation. Here are some examples of real-time data that can be useful:
+
+            Rainfall data: Real-time rainfall data can help people understand how much rainwater is available and can be used for various purposes. This data can be obtained from weather monitoring stations or online weather services.
+            
+            Water level data: Real-time water level data can help people understand the availability of surface water and groundwater sources. This data can be obtained from government agencies or through water level sensors installed in wells and boreholes.
+            
+            Water usage data: Real-time water usage data can help people understand how much water they are using and where it is being used. This data can be obtained through smart meters or water usage monitoring systems.
+            
+            Water quality data: Real-time water quality data can help people understand the quality of the water they are using and whether it is safe for various purposes. This data can be obtained from water testing laboratories or through online water quality monitoring systems.
+            
+            Drought monitoring data: Real-time drought monitoring data can help people understand the severity of drought conditions in their area and take appropriate conservation measures. This data can be obtained from government agencies or through online drought monitoring systems.
+            
+            Access to real-time data can be made available through various means, such as online portals, mobile applications, or SMS services. By making real-time data easily accessible, people can make informed decisions about water usage and conservation and contribute towards a sustainable future.</p>
+        </div>
+	</section>
+	
+	
+    <section id="water-saving-calculators">
+        <h2>Water-saving calculators</h2>
+        <div class= "image-container" >
+        <img src="https://th.bing.com/th/id/OIP.JjmqudZGKKRqcmbcv-jgBAHaFj?w=210&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        <p>
+      <a href="https://www.water.ie/conservation/home/water-conservation-calculator/">Water-saving calculators</a>
+            </p>
+            </div>
+        </section>
+
+
+    <section id="education-resources">
+
+        <h2>Education resources</h2>
+        <div class= "image-container" >
+            <img src="https://th.bing.com/th/id/OIP.oC-muLUiQQGA9szkDuaHSAHaEo?w=295&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        <p>There are various educational resources available on topics related to water conservation and sustainability in India. Some of these resources include:<br>
+            Online courses: Various online courses are available that cover topics related to water conservation and sustainability. These courses are often free and can be accessed by anyone with an internet connection. Some examples of online courses include "Water Conservation and Management" by NPTEL and "Water Management for Sustainable Development" by edX.<br> 2.
+Workshops and training programs: Many organizations and government agencies in India conduct workshops and training programs on water conservation and sustainability. These programs are often targeted toward specific audiences, such as farmers, urban residents, or school children.<br>3.
+Informational websites: There are many informational websites that provide resources on water conservation and sustainability in India. Some examples of such websites include the Central Water Commission website and the National Water Mission website.<br>4.
+Publications: Various publications such as books, research papers, and reports are available on topics related to water conservation and sustainability in India. These publications are often available online and can be accessed for free.<br>5.
+Education programs: Many universities and educational institutions in India offer courses and degree programs in water management and sustainability. These programs provide students with a comprehensive understanding of the challenges facing the water sector in India and equip them with the skills to address these challenges.<br>
+By utilizing these educational resources, people in India can gain a better understanding of water conservation and sustainability and take meaningful action to contribute towards a sustainable future
+        </p>
+        </div>
+        </section>
+
+        <section id="water-conservation-programs">
+            <h2>Water conservation programs</h2>
+                <div class= "image-container" >
+                <img src="https://th.bing.com/th/id/OIP.U7VrS0Pe-nDalTVu4LdnJAHaD4?w=327&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+            <p>Several water conservation programs and initiatives in India aim to promote water conservation and sustainability. Here are some examples:<br>
+1.	Jal Shakti Abhiyan: This is a national campaign launched by the Government of India to promote water conservation, augmentation, and preservation. It focuses on key areas such as water conservation and rainwater harvesting, renovation of traditional water bodies, reuse of water, and watershed development. <br>
+2.	Water Conservation and Management: The National Programme for the Management of Aquifer Recharge and Harvesting (NAQUIM) is a program initiated by the Government of India to promote water conservation and management. It focuses on rainwater harvesting, artificial recharge of aquifers, and the efficient use of water resources. <br>
+3.	Rebates for Water-Saving Appliances: Several state governments in India offer rebates for the purchase of water-saving appliances such as low-flow showerheads, dual-flush toilets, and water-efficient washing machines. These rebates can help individuals and businesses save money while also conserving water. <br>
+4.	Educational Events: Several organizations and government agencies in India conduct educational events such as workshops, seminars, and training programs to promote water conservation and sustainability. These events provide individuals and businesses with information on water-saving techniques and technologies. <br>
+5.	Incentives for Businesses: Some state governments in India offer incentives for businesses that implement water conservation measures. For example, the Maharashtra State Government incentivizes industries that install rainwater harvesting systems, reuse treated wastewater, and reduce water consumption. <br>
+By promoting these water conservation programs and initiatives, individuals and businesses in India can take meaningful steps toward conserving water and promoting sustainability.
+
+</div>
+</p>
+            </section>
+           
+                <section id="news-updates">
+                    <h2>News and updates</h2>
+                    <div class= "image-container" >
+                    <img src="https://resize.indiatvnews.com/en/resize/newbucket/730_-/2022/01/jal-jeevan-mission-image-1641002766.jpg"
+                    <p> Water availability is a significant concern in India, with many regions facing water scarcity and drought conditions. Here are some updates on water availability issues in different parts of India:<br>
+1.	Maharashtra: As of March 2023, Maharashtra is facing severe water scarcity, with more than 1,000 villages and several cities facing acute water shortage. The state government has imposed strict water usage restrictions, including a ban on using water for non-essential activities such as car washing and swimming pools. <br>
+2.	Tamil Nadu: Tamil Nadu is facing its worst drought in decades, with several districts reporting a significant reduction in water levels in reservoirs and lakes. The state government has declared a drought in several districts and has implemented water rationing measures in urban areas. <br>
+3.	Delhi: The national capital region has been facing a water crisis due to the depletion of groundwater levels and reduced supply from neighboring states. The Delhi government has launched several initiatives to conserve water, including rainwater harvesting, wastewater treatment, and promoting the use of water-efficient fixtures. <br>
+4.	Gujarat: Gujarat is facing a severe water shortage due to a significant reduction in rainfall in the state. Several districts have declared drought, and the state government has implemented measures such as cloud-seeding and drilling new borewells to alleviate the water scarcity. <br>
+5.	Karnataka: Karnataka is experiencing a water crisis due to deficient rainfall in the state, with several districts facing acute water scarcity. The state government has imposed water usage restrictions in urban areas and has launched a campaign to promote rainwater harvesting and water conservation. <br>
+These updates highlight the urgent need for effective water management and conservation measures to address the growing water scarcity and ensure sustainable water availability for future generations.
+
+
+</p>
+                    </div>
+                    </section>
+                    <footer>
+  <div class="container">
+    <p>&copy; 2023 WATER AVAILABILITY. All rights reserved.</p>
+    <ul>
+      <li><a href="About.html">About us</a></li>
+      <li><a href="http://nwda.gov.in/content/index.php">Terms of Use</a></li>
+      <li><a href="https://instagram.com/pritishsingh13?igshid=ZDdkNTZiNTM=">Contact Us</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
